@@ -1,0 +1,48 @@
+*.class
+bin/
+
+# Mobile Tools for Java (J2ME)
+.mtj.tmp/
+
+# Package Files #
+*.jar
+*.war
+*.ear
+target
+out
+*.iml
+# virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
+hs_err_pid*
+.idea
+.classpath
+.project
+.settings
+*.ipr
+*.iws
+.DS_Store
+classes
+.cache
+.cache-main
+.cache-tests
+.gradle
+build/
+.tmp
+
+parser-js/build-assets/npm-debug.log
+test/sources/
+test/targets/
+test/transformations/
+
+# out folders
+core-modules/out/
+runtime/out/
+wlang/out/
+parser/out/
+benchmark/out/
+excel-module/out/
+flatfile-module/out/
+io-module/out/
+mule-service-weave/out/
+parser-js/out/
+playground/out/
+yaml-module/out/
