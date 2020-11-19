@@ -1,0 +1,20 @@
+{
+  "Contracts": {
+    "objectName": "Contract",
+    "selectKeys": [
+      "Id",
+      "AccountId",
+      "Contact__c",
+      "Billing_Contact__c"
+    ]
+  },
+  "AccountId": [
+    "AAAAAA",
+    "BBBBBB"
+  ],
+  "ContactId": [
+    "CCCCC"
+  ],
+  "limit": 500,
+  "offset":  0
+}
