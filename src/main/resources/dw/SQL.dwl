@@ -14,16 +14,16 @@ fun WHERE(query: String, where: String) =
     else "$(query) WHERE $(where)"
 
 fun OR(left: String, right: String) =
-    WHERE_ANDOR(left, right, "OR")
+    ANDOR(left, right, false)
 
 fun AND(left: String, right: String) =
-    WHERE_ANDOR(left, right, "AND")
+    ANDOR(left, right, true)
 
-fun WHERE_ANDOR(left: String, right: String, joiner: String) =
+fun ANDOR(left: String, right: String, requireBoth: Boolean) =
     if (isEmpty(left)) right
     else if (isEmpty(right)) left
-    else if ((right contains " AND ") or (right contains " OR ")) "$(left) $(joiner) ($(right))"
-    else "$(left) $(joiner) $(right)"
+    else if ((right contains " AND ") or (right contains " OR ")) "$(left) $(if(requireBoth) 'AND' else 'OR') ($(right))"
+    else "$(left) $((if (requireBoth) 'AND' else 'OR')) $(right)"
 
 fun IN(keyName: String, values: Array, wrapIn: String = "", separateWith: String = ", ") =
     if (sizeOf(values default []) == 0) ""
